@@ -17,16 +17,14 @@ function battle(character1, character2) {
     }
 }
 
-// Uso de prompt
-const name1 = prompt("Enter the name of character 1:");
-const damage1 = parseInt(prompt("Enter the damage of character 1:"));
+// Uso de FOR y PROMPT, y constante para guardar los pjs
+const characters = [];
 
-const name2 = prompt("Enter the name of character 2:");
-const damage2 = parseInt(prompt("Enter the damage of character 2:"));
+for (let i = 1; i <= 2; i++) {
+    const name = prompt(`Enter the name of character ${i}:`);
+    const damage = parseInt(prompt(`Enter the damage of character ${i}:`));
+    characters.push(createCharacter(name, damage));
+}
 
-// Creación de personajes x el prompt
-const pjUno = createCharacter(name1, damage1);
-const pjDos = createCharacter(name2, damage2);
-
-// Llamado a la batalla
-battle(pjUno, pjDos);
+// llamado a la función
+battle(characters[0], characters[1]);
