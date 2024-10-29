@@ -9,17 +9,24 @@ function createCharacter(name, damage) {
 // Función de batalla
 function battle(character1, character2) {
     if (character1.damage > character2.damage) {
-        console.log(`${character1.name} killed ${character2.name}!`);
+        alert(`${character1.name} killed ${character2.name}!`);
     } else if (character1.damage < character2.damage) {
-        console.log(`${character2.name} killed ${character1.name}!`);
+        alert(`${character2.name} killed ${character1.name}!`);
     } else {
-        console.log(`Draw!`);
+        alert("Draw!");
     }
 }
 
-// Personajes credaos usando la función anterior
-const pjUno = createCharacter("Alaric", 50);
-const pjDos = createCharacter("Thorne", 40);
+// Uso de prompt
+const name1 = prompt("Enter the name of character 1:");
+const damage1 = parseInt(prompt("Enter the damage of character 1:"));
 
-// LLamado
+const name2 = prompt("Enter the name of character 2:");
+const damage2 = parseInt(prompt("Enter the damage of character 2:"));
+
+// Creación de personajes con los datos ingresados por el usuario
+const pjUno = createCharacter(name1, damage1);
+const pjDos = createCharacter(name2, damage2);
+
+// Llamado a la batalla
 battle(pjUno, pjDos);
