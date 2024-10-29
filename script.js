@@ -24,7 +24,7 @@ const damage1 = parseInt(prompt("Enter the damage of character 1:"));
 const name2 = prompt("Enter the name of character 2:");
 const damage2 = parseInt(prompt("Enter the damage of character 2:"));
 
-// Creación de personajes con los datos ingresados por el usuario
+// Creación de personajes x el prompt
 const pjUno = createCharacter(name1, damage1);
 const pjDos = createCharacter(name2, damage2);
 
