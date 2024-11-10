@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.paraNavegar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: .625rem;
+    margin-left: .625rem;
+    list-style: none;
+}
+
+.paraNavegar a{
+    color: white;
+}
+
+.navBar{
+    background-image: url(../assets/dungeon.webp);
+    background-size: cover;
+}
+
